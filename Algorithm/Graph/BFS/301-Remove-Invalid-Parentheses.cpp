@@ -1,4 +1,4 @@
-// leetcode POTD 7 Oct 2026 - 301. Remove Invalid Parentheses
+// leetcode POTD 7 Oct 2026 -    301. Remove Invalid Parentheses
 
 #include <vector>
 #include <string>
