@@ -1,0 +1,19 @@
+### The problem is to find the indices of the target elements in a sorted list.
+ 
+## Intuition
+Since the list is sorted, we can use binary search to efficiently find the target's first and last occurrences.
+
+We perform two binary searches:
+- The first finds the first occurrence of the target.
+- The second finds the last occurrence of the target.
+
+## Approach
+1. **Find the first occurrence:** Perform a binary search to find the leftmost index of the target. If the target is found, don't stop. Keep searching in the left half to check whether an earlier occurrence exists.
+2. **Find the last occurrence:** Use the same approach as for finding the first occurrence, but search in the right half to check whether a later occurrence exists.
+3. **Return the result:** Return all indices in the range from the first occurrence to the last occurrence of the target.
+
+## Complexity
+Time Complexity: Sorting the array takes (O(n \log n)), and each binary search takes (O(\log n)). Therefore, the overall time complexity is (O(n \log n)).
+Space Complexity: O(n)
+
+
