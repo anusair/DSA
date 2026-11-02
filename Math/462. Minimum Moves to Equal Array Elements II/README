@@ -1,0 +1,18 @@
+### The problem is to find the minimum number of moves required to make all the elements in the list equal.
+### This problem differs from "Minimum Moves to Equal Array Elements I." In the former, we can only increment the elements, whereas in this one, we can both increment and decrement them.
+
+
+## Intuition
+- Since we can both increment and decrement the elements, finding the minimum element in the array isn't enough. We still need to determine a target value. 
+- Instead of choosing the minimum element, we can choose the median element in the array.
+- *Median* is the middle value in a set of numbers arranged in order from smallest to largest.
+- After choosing the median, we can iterate over the list and add the difference between each element and the median to the final result.
+
+## Approach 
+1. Sort the array. Why is sorting necessary here? Because we need to find the median, and the array must be sorted to determine the median correctly.
+2. Find the median. We can find its index using the formula floor(n / 2), where n represents the length of the array. 
+3. Iterate over the array and add the absolute difference between each element and the median to the final result.
+
+## Complexity 
+Time Complexity: Sorting the array takes (O(n \log n)), while iterating over it takes (O(n)). Therefore, the overall time complexity is (O(n \log n)).
+Space Complexity: The space complexity depends on the programming language used. In Python, it is (O(n)), whereas in C++, it is (O(\log n)).
