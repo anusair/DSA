@@ -1,0 +1,15 @@
+## Intuition
+
+The key idea behind solving this problem is Dynamic Programming (DP). At each step, we have three possible choices: climb 1, 2, or 3 stairs. These choices form a decision tree, where each node represents a possible position and each branch represents a choice we can make. Since this tree can contain overlapping subproblems, we can use DP to avoid recalculating the same results multiple times.
+
+## Approach
+
+1. Initialize a DP vector of size n + 1 and set the first element dp[0] to 0.
+2. Iterate from 1 to n, calculating the number of ways to reach each stair using the three possible previous positions.
+3. Take the minimum cost among the three possible previous positions to determine the minimum cost of reaching the current stair.
+4. return dp[-1]
+
+## Complexity
+
+Time Complexity: O(n) — We iterate through the DP vector once, performing a constant number of operations at each iteration.
+Space Complexity: O(n) — We use a DP vector of size n + 1 to store the minimum costs.
