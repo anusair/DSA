@@ -1,0 +1,23 @@
+### This problem related to math
+
+## Intuition
+
+- Since we have three purchasing options (type 1, type 2, or both), we should first compare costBoth with cost1 + cost2.
+  -If costBoth is cheaper, purchasing both items together is more cost-effective than purchasing them separately.
+  -Otherwise, purchasing type 1 and type 2 individually is cheaper.
+
+- If we choose costBoth but still have unmet requirements for need1 or need2, we need to purchase the remaining items by taking the minimum between ((cost1 , cost2) , costBoth).
+
+## Approach
+
+1- Take the minimum between need1 and need2.
+2- Check whether costBoth is greater than cost1 + cost2 or not.
+3- If yes, just return cost2 * need2 + cost1 * need1.
+4- Otherwise, we have two cases:
+    - If need1 is smaller than or equal to need2, we still need to satisfy the remaining requirement for need2.
+    - Otherwise, we need to satisfy the remaining requirement for need1.
+
+## Complexity
+
+Time Complexity: O(1)
+Space Complexity: O(1)
